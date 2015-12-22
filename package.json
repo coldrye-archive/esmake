@@ -1,6 +1,6 @@
 {
   "name": "esmake",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Shared GNU Make Makefile for coldrye-es projects.",
   "keywords": [
     "build", "make"
