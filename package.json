@@ -1,0 +1,30 @@
+{
+  "name": "esmake",
+  "version": "0.0.1",
+  "description": "Shared GNU Make Makefile for coldrye-es projects.",
+  "keywords": [
+    "build", "make"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "http://es.coldrye.eu/esmake",
+  "bugs": {
+    "url": "https://github.com/coldrye-es/esmake/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coldrye-es/esmake.git"
+  },
+  "author": {
+    "name": "Carsten Klein",
+    "email": "silkentrance@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "cklein",
+      "email": "silkentrance@gmail.com"
+    }
+  ],
+  "files": [
+    "Makefile.*.in", "templates"
+  ]
+}
