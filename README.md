@@ -132,6 +132,12 @@ different branch than master, or, publish a master that has uncommitted changes.
 Runs all available tests using **mocha**.
 
 
+### watch
+
+Runs a watch process that will update coverage information whenever the sources
+or tests have been changed.
+
+
 ## Resources
 
  - (1) [Github Site](https://github.com/coldrye-es/esmake)
