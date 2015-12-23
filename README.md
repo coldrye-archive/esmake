@@ -41,7 +41,7 @@ Just run
 ```
 > mkdir myproject
 > cd myproject
-> npm install esmake
+> npm install coldrye-es/esmake
 > cp -r node_modules/esmake/templates/software/* .
 > cp -r node_modules/esmake/templates/software/.??* .
 ```
