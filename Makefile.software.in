@@ -33,7 +33,7 @@ covercurried    = $(build_test_dir)/covercurried-test.js
 
 sources         = $(wildcard $(src_dir)/*.es) $(wildcard $(src_dir)/**/*.es)
 tests           = $(wildcard $(test_dir)/*.es) $(wildcard $(test_dir)/**/*.es)
-fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/**/fixtures/*)
+fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/fixtures/**/*) $(wildcard $(test_dir)/**/fixtures/*)
 
 
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
