@@ -25,6 +25,8 @@ src_dir         = ./src
 test_dir        = ./test
 watchdog        = $(build_dir)/.watchdog
 
+node			= $$(which nodejs || which node)
+
 
 # dynamically created dummy test for making sure that all sources will be instrumented
 covercurried    = $(build_test_dir)/covercurried-test.js
@@ -118,7 +120,7 @@ deps:
 # installs global dev dependencies
 deps-global:
 	@echo "installing global dev dependencies (sudo)..."
-	@sudo npm -g install $(shell node -e " \
+	@sudo npm -g install $(shell $(node) -e " \
 		var pkg = require('./package.json'); \
 		var deps = []; \
         for (var key in pkg.globalDevDependencies) { \
@@ -136,7 +138,7 @@ deps-global:
 
 deps-global-travis:
 	@echo "installing global dev dependencies (travis)..."
-	@npm -g install $(shell node -e " \
+	@npm -g install $(shell $(node) -e " \
 		var pkg = require('./package.json'); \
 		var deps = []; \
         for (var key in pkg.globalDevDependencies) { \
