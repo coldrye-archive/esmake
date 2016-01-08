@@ -4,10 +4,11 @@
 
 ### chore
 
-* chore(LICENSE): update copyright info ([303956f](https://github.com/coldrye-es/esmake/commit/303956f))
+* chore(LICENSE): update copyright info ([a2fa381](https://github.com/coldrye-es/esmake/commit/a2fa381))
 
 ### fix
 
+* fix(Makefile.software.in): removed extraneous/erroneous second deps-global-travis ([88f95a4](https://github.com/coldrye-es/esmake/commit/88f95a4))
 * fix(package.json): email ([aafd4eb](https://github.com/coldrye-es/esmake/commit/aafd4eb))
 
 
