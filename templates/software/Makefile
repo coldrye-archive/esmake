@@ -1,6 +1,6 @@
 # vim: noexpandtab:ts=4:sw=4
 
-# Copyright 2015 Carsten Klein
+# Copyright 2015-2016 Carsten Klein
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,17 +18,16 @@
 # configuration
 
 
-# The types of API documentation you want to have the system generate.
+# The types of API documentation you want to have the system generate
 doc = dev pub
-
-
-
-# custom targets and overrides go here
-
 
 
 
 # include esmake
 
 include ./node_modules/esmake/Makefile.software.in
+
+
+
+# custom targets and overrides go here
 
