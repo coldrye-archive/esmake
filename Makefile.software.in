@@ -39,7 +39,7 @@ fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/fixtures/*
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
 		build-fixtures cover check-cover clean clean-doc clean-build clean-cover \
 		clean-dist deps deps-global deps-global-travis dist doc \
-		lint test test-run watch watch-run publish
+		lint test test-run watch watch-run publish assert-master
 
 
 # internal
@@ -189,7 +189,7 @@ lint: $(sources) $(tests)
 	@eslint $?
 
 
-publish: clean dist
+publish: assert-master clean dist
 	@cd ${dist_dir} && MASTER=1 npm publish
 
 
@@ -242,4 +242,9 @@ $(covercurried):
 	@echo "var path = require('path'), glob = require('glob'), files = glob.sync('src/**/*.es');\
           while(files.length > 0) { var file = files.pop(); require(path.join('..', file)); }"\
 		  >$(@)
+
+
+# internal
+assert-master:
+	@git status | grep "On branch master" >/dev/null
 
