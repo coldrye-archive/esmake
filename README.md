@@ -98,8 +98,7 @@ Installs the global dependencies. Requires **sudo**.
 
 ### dist
 
-Builds the distribution folder from the available sources. Runs both the test
-and the cover target.
+Builds the distribution folder from the available sources. Implies lint and cover.
 
 
 ### doc
@@ -134,8 +133,9 @@ Runs all available tests using **mocha**.
 
 ### watch
 
-Runs a watch process that will update coverage information whenever the sources
-or tests have been changed.
+Runs a watch process that will update both the documentation and the coverage
+information whenever the sources or tests or relevant configuration files have
+been changed.
 
 
 ## Resources

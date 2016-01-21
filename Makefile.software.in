@@ -25,6 +25,8 @@ src_dir         = ./src
 test_dir        = ./test
 watchdog        = $(build_dir)/.watchdog
 
+watchconfig     = ./.esdoc-pub.json ./.esdoc-dev.json ./.istanbul.yml ./.babelrc
+
 node			= $$(which nodejs || which node)
 
 
@@ -39,7 +41,7 @@ fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/fixtures/*
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
 		build-fixtures cover check-cover clean clean-doc clean-build clean-cover \
 		clean-dist deps deps-global deps-global-travis dist doc \
-		lint test test-run watch watch-run publish assert-master
+		lint test watch watch-run publish assert-master
 
 
 # internal
@@ -172,7 +174,7 @@ deps-global-travis:
 
 
 # creates the distribution
-dist: clean-dist cover
+dist: clean-dist lint cover
 	@echo "creating distribution..."
 	@BABEL_ENV="DIST" babel -d $(dist_dir) $(src_dir) >/dev/null
 	@cp *.md LICENSE $(dist_dir)/ >/dev/null
@@ -194,11 +196,7 @@ publish: assert-master clean dist
 
 
 # tests everything
-test: lint test-run
-
-
-# internal
-test-run: $(tests)
+test: $(tests)
 	@echo "running tests..."
 	@BABEL_ENV="TEST" mocha --compilers js:babel-core/register $?
 
@@ -216,15 +214,16 @@ watch-run: $(watchdog)
 
 
 # internal
-$(watchdog): $(sources) $(tests) $(fixtures)
+$(watchdog): $(sources) $(tests) $(fixtures) $(watchconfig)
 	@-make cover
+	@-make doc
 	@echo "watching... (CTRL-C to abort)"
 
 
 # internal
 $(build_src_dir):
 	@echo "building sources..."
-	@-mkdir $(build_dir)
+	@-mkdir $(build_dir) 2>/dev/null
 	@-ln -f -s ../$(src_dir) $(build_dir)/
 
 
