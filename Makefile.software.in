@@ -27,7 +27,10 @@ watchdog        = $(build_dir)/.watchdog
 
 watchconfig     = ./.esdoc-pub.json ./.esdoc-dev.json ./.istanbul.yml ./.babelrc
 
-node			= $$(which nodejs || which node)
+node			= $$(which node || which nodejs)
+nodever         = $$($(node) --version)
+
+babel_istanbul  = $$(which babel-istanbul)
 
 
 # dynamically created dummy test for making sure that all sources will be instrumented
@@ -51,7 +54,9 @@ build: build-src build-test
 # internal
 build-cover: $(covercurried)
 	@echo "gathering coverage data..."
-	@babel-istanbul cover _mocha $(build_test_dir)/*
+	@echo "$(nodever)" | grep "^v0.12" >/dev/null && \
+	node --harmony $(babel_istanbul) cover _mocha $(build_test_dir)/* || \
+	$(babel_istanbul) cover _mocha $(build_test_dir)/*
 
 
 # internal

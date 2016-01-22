@@ -1,3 +1,27 @@
+<a name="0.0.7"></a>
+## 0.0.7 (2016-01-22)
+
+
+* version bump v0.0.7 ([92ca78c](https://github.com/coldrye-es/esmake/commit/92ca78c))
+
+### fix
+
+* fix(babel-istanbul): now also works with node v0.12.x and direct use of harmony only features such a ([5a93aca](https://github.com/coldrye-es/esmake/commit/5a93aca))
+
+
+
+<a name="0.0.6"></a>
+## 0.0.6 (2016-01-21)
+
+
+* fix(templates/software): esdoc-dev now includes private ([cde4e30](https://github.com/coldrye-es/esmake/commit/cde4e30))
+
+### docs
+
+* docs(README.md): clarifying, ([06805a6](https://github.com/coldrye-es/esmake/commit/06805a6))
+
+
+
 <a name="0.0.5"></a>
 ## 0.0.5 (2016-01-08)
 
@@ -8,7 +32,7 @@
 
 ### fix
 
-* fix(Makefile.software.in): removed extraneous/erroneous second deps-global-travis ([88f95a4](https://github.com/coldrye-es/esmake/commit/88f95a4))
+* fix(Makefile.software.in): removed extraneous/erroneous second deps-global-travis ([bca5061](https://github.com/coldrye-es/esmake/commit/bca5061))
 * fix(package.json): email ([aafd4eb](https://github.com/coldrye-es/esmake/commit/aafd4eb))
 
 
