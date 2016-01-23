@@ -1,3 +1,15 @@
+<a name="0.0.8"></a>
+## 0.0.8 (2016-01-23)
+
+
+* version bump v0.0.8 ([7826a3b](https://github.com/coldrye-es/esmake/commit/7826a3b))
+
+### chore
+
+* chore: reworking software template and introduced update-commons target ([3f842db](https://github.com/coldrye-es/esmake/commit/3f842db))
+
+
+
 <a name="0.0.7"></a>
 ## 0.0.7 (2016-01-22)
 
@@ -6,7 +18,7 @@
 
 ### fix
 
-* fix(babel-istanbul): now also works with node v0.12.x and direct use of harmony only features such a ([5a93aca](https://github.com/coldrye-es/esmake/commit/5a93aca))
+* fix(babel-istanbul): now also works with node v0.12.x and direct use of harmony only features such a ([f1b53fc](https://github.com/coldrye-es/esmake/commit/f1b53fc))
 
 
 

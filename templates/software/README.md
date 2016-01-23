@@ -1,14 +1,18 @@
-# TBD:name
+[![Build Status](https://travis-ci.org/coldrye-es/TBD:NAME.svg?branch=master)](https://travis-ci.org/coldrye-es/TBD:NAME)
+[![NPM](https://nodei.co/npm/TBD:NAME.png?mini=true)](https://nodei.co/npm/TBD:NAME/)
+
+# TBD:NAME
 
 
-## Motivation
+## Releases
 
-TBD:motivation
+See the [changelog](https://github.com/coldrye-es/TBD:NAME/blob/master/CHANGELOG.md) for more information.
 
 
-## Travis-CI
+## TBD:Limitations
 
-[![Build Status](https://travis-ci.org/coldrye-es/TBD:name.svg?branch=master)](https://travis-ci.org/coldrye-es/TBD:name)
+
+## TBD:Motivation
 
 
 ## Project Site
@@ -20,9 +24,9 @@ including test coverage reports and API documentation.
 ## Contributing
 
 You are very welcome to propose changes and report bugs, or even provide pull
-requests on [github](https://github.com/coldrye-es/TBD:name).
+requests on [github](https://github.com/coldrye-es/esbases).
 
-See the [contributing guidelines](https://github.com/coldrye-es/TBD:name/blob/master/CONTRIBUTING.md) for more information.
+See the [contributing guidelines](https://github.com/coldrye-es/TBD:NAME/blob/master/CONTRIBUTING.md) for more information.
 
 
 ### Contributors
@@ -30,44 +34,39 @@ See the [contributing guidelines](https://github.com/coldrye-es/TBD:name/blob/ma
  - [Carsten Klein](https://github.com/silkentrance) **Maintainer**
 
 
-## Runtime Dependencies
+### Building
 
-TBD:runtime-dependencies
+See [build process](https://github.com/coldrye-es/esmake#build-process) and the available [build targets](https://github.com/coldrye-es/esmake#makefilesoftwarein)
+for more information on how to build this.
 
- - [babel-runtime](https://github.com/babel/babel)
-
-
-## Development Dependencies
-
-See [esmake](https://github.com/coldrye-es/esmake#development-dependencies) for more information on development dependencies.
+See also [development dependencies](https://github.com/coldrye-es/esmake#development-dependencies) and on how to deal with them.
 
 
-## Building
-
-See [esmake](https://github.com/coldrye-es/esmake#build-process) and the targets listed under
-[esmake](https://github.com/coldrye-es/esmake#makefilesoftwarein) for more information on how to build this.
-
-
-## Installation
-
-TBD:installation
+## TBD:Installation
 
 ``npm --save TBD:NAME``
 ``npm --save-dev TBD:NAME``
 
 
-## Usage
+### TBD:Runtime Dependencies
 
-TBD:usage
+ - _[babel-runtime](https://github.com/babel/babel)_
+
+**The dependencies denoted in _italics_ must be provided by the using project.**
 
 
-## Similar Projects
+## TBD:Usage
 
-TBD:similar-projects
+```
+import TBD from 'TBD:NAME';
+```
+
+
+## TBD:Similar Projects
 
 
 ## Resources
 
- - (1) [Github Site](https://github.com/coldrye-es/TBD:name)
- - (2) [Project Site](http://TBD:name.es.coldrye.eu)
+ - (1) [Github Site](https://github.com/coldrye-es/TBD:NAME)
+ - (2) [Project Site](http://TBD:NAME.es.coldrye.eu)
 

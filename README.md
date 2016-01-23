@@ -138,6 +138,12 @@ information whenever the sources or tests or relevant configuration files have
 been changed.
 
 
+### update-commons
+
+Updates CONTRIBUTING.md, .esdoc*.json and .travis.yml to the versions from the
+template.
+
+
 ## Resources
 
  - (1) [Github Site](https://github.com/coldrye-es/esmake)

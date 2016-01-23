@@ -44,7 +44,8 @@ fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/fixtures/*
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
 		build-fixtures cover check-cover clean clean-doc clean-build clean-cover \
 		clean-dist deps deps-global deps-global-travis dist doc \
-		lint test watch watch-run publish assert-master
+		lint test watch watch-run publish assert-master \
+		update-commons
 
 
 # internal
@@ -251,4 +252,11 @@ $(covercurried):
 # internal
 assert-master:
 	@git status | grep "On branch master" >/dev/null
+
+
+# updates build process related commons
+update-commons:
+	@cp ./node_modules/esmake/templates/software/CONTRIBUTING.md .
+	@cp ./node_modules/esmake/templates/software/.esdoc* .
+	@cp ./node_modules/esmake/templates/software/.travis.yml .
 
