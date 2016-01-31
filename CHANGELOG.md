@@ -1,3 +1,15 @@
+<a name="0.0.9"></a>
+## 0.0.9 (2016-01-31)
+
+
+* version bump v0.0.9 ([6d6d9aa](https://github.com/coldrye-es/esmake/commit/6d6d9aa))
+
+### feat
+
+* feat(software): now includes mocking framework sinon as a dev dependency ([ddd5137](https://github.com/coldrye-es/esmake/commit/ddd5137))
+
+
+
 <a name="0.0.8"></a>
 ## 0.0.8 (2016-01-23)
 
@@ -6,7 +18,7 @@
 
 ### chore
 
-* chore: reworking software template and introduced update-commons target ([3f842db](https://github.com/coldrye-es/esmake/commit/3f842db))
+* chore: reworking software template and introduced update-commons target ([c7f4a24](https://github.com/coldrye-es/esmake/commit/c7f4a24))
 
 
 
