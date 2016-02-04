@@ -236,7 +236,6 @@ $(build_src_dir):
 # internal
 $(build_test_dir): $(tests)
 	@echo "building tests..."
-	@echo $(tests)
 	@BABEL_ENV="BUILD" babel -d $(build_dir) $? >/dev/null
 
 
