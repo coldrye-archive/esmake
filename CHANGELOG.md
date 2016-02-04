@@ -1,3 +1,15 @@
+<a name="0.0.10"></a>
+## 0.0.10 (2016-02-04)
+
+
+* version bump v0.0.10 ([cc94a5a](https://github.com/coldrye-es/esmake/commit/cc94a5a))
+
+### fix
+
+* fix(Makefile.software.in): recursive wildcards did not work ([d1a48e8](https://github.com/coldrye-es/esmake/commit/d1a48e8))
+
+
+
 <a name="0.0.9"></a>
 ## 0.0.9 (2016-01-31)
 

@@ -36,9 +36,9 @@ babel_istanbul  = $$(which babel-istanbul)
 # dynamically created dummy test for making sure that all sources will be instrumented
 covercurried    = $(build_test_dir)/covercurried-test.js
 
-sources         = $(wildcard $(src_dir)/*.es) $(wildcard $(src_dir)/**/*.es)
-tests           = $(wildcard $(test_dir)/*.es) $(wildcard $(test_dir)/**/*.es)
-fixtures		= $(wildcard $(test_dir)/fixtures/*) $(wildcard $(test_dir)/fixtures/**/*) $(wildcard $(test_dir)/**/fixtures/*)
+sources         = $(shell find $(src_dir) -type f -name '*.es')
+tests           = $(shell find $(test_dir) -type f -name '*.es')
+fixtures		= $(shell find $(test_dir) -type d -name 'fixtures')
 
 
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
@@ -77,8 +77,8 @@ build-test: $(build_test_dir) build-fixtures
 # internal
 build-fixtures: $(fixtures)
 	@echo "building fixtures..."
-	@for DIR in $$(echo $(^D) | tr ' ' '\n' | sort | uniq); do mkdir -p $(build_dir)/$$DIR; done
-	@for FILE in $?; do cp $$FILE $(build_dir)/$$(dirname $$FILE)/; done
+	@for DIR in $$(echo $? | tr ' ' '\n' | sort | uniq); do mkdir -p $(build_dir)/$$DIR; done
+	@for DIR in $?; do cp -a $$DIR/* $(build_dir)/$$DIR/; done
 
 
 # internal
@@ -236,6 +236,7 @@ $(build_src_dir):
 # internal
 $(build_test_dir): $(tests)
 	@echo "building tests..."
+	@echo $(tests)
 	@BABEL_ENV="BUILD" babel -d $(build_dir) $? >/dev/null
 
 
