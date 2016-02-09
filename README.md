@@ -42,8 +42,8 @@ Just run
 > mkdir myproject
 > cd myproject
 > npm install coldrye-es/esmake
-> cp -r node_modules/esmake/templates/software/* .
-> cp -r node_modules/esmake/templates/software/.??* .
+> cp -r node_modules/esmake/templates/software/Makefile .
+> make init-commons
 ```
 
 and edit the available files like **package.json**, **.babelrc** and so on as
@@ -142,6 +142,12 @@ been changed.
 
 Updates CONTRIBUTING.md, .esdoc*.json and .travis.yml to the versions from the
 template.
+
+
+### update-changelog
+
+Updates CHANGELOG.md using ``conventional changelog``. The updated changelog
+must be checked for errors prior to commit.
 
 
 ## Resources

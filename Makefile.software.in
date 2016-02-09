@@ -32,20 +32,46 @@ nodever         = $$($(node) --version)
 
 babel_istanbul  = $$(which babel-istanbul)
 
-
 # dynamically created dummy test for making sure that all sources will be instrumented
 covercurried    = $(build_test_dir)/covercurried-test.js
 
-sources         = $(shell find $(src_dir) -type f -name '*.es')
-tests           = $(shell find $(test_dir) -type f -name '*.es')
-fixtures		= $(shell find $(test_dir) -type d -name 'fixtures')
+# must prevent these from failing on new project
+sources         = $(shell find $(src_dir) -type f -name '*.es' || exit 0)
+tests           = $(shell find $(test_dir) -type f -name '*.es' || exit 0)
+fixtures		= $(shell find $(test_dir) -type d -name 'fixtures' || exit 0)
+
+
+# project initialization / update
+commons_src = ./node_modules/esmake/templates/software
+
+init_commons_files = \
+	$(commons_src)/README.md \
+	$(commons_src)/LICENSE \
+	$(commons_src)/package.json \
+	$(commons_src)/.istanbul.yml \
+	$(commons_src)/.babelrc \
+	$(commons_src)/.eslintrc \
+
+init_commons_gitignore_files = \
+	$(commons_src)/_gitignore \
+
+init_commons_dirs = \
+	$(commons_src)/$(src_dir) \
+	$(commons_src)/$(test_dir)
+
+update_commons_files = \
+	$(commons_src)/CONTRIBUTING.md \
+	$(commons_src)/.esdoc-pub.json \
+	$(commons_src)/.esdoc-dev.json \
+	$(commons_src)/.travis.yml
 
 
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
 		build-fixtures cover check-cover clean clean-doc clean-build clean-cover \
 		clean-dist deps deps-global deps-global-travis dist doc \
 		lint test watch watch-run publish assert-master assert-changelog \
-		update-commons
+		init-commons update-commons update-changelog init-commons-files \
+		init-commons-dirs update-commons-files
 
 
 # internal
@@ -260,9 +286,47 @@ assert-changelog:
 	 || (echo "CHANGELOG was not updated!" && exit 1)
 
 
+# initialize build process related commons
+init-commons: init-commons-files init-commons-gitignore-files init-commons-dirs update-commons
+	@echo "please check your gear, especially README.md and package.json"
+
+
+# internal
+init-commons-files:
+	@for file in $(init_commons_files); do \
+	   test ! -f $$(basename $$file) && cp $$file .; \
+	 done
+	@touch CHANGELOG.md
+
+
+# internal : *sigh* npm will filter out all .gitignore
+init-commons-gitignore-files:
+	@for file in $(init_commons_gitignore_files); do \
+	   test ! -f .gitignore && cp $$file .gitignore; \
+	 done
+
+
+# internal
+init-commons-dirs:
+	@for dir in $(init_commons_dirs); do \
+	   test ! -d $$(basename $$dir) && cp -r $$dir .; \
+	 done
+
+
 # updates build process related commons
-update-commons:
-	@cp ./node_modules/esmake/templates/software/CONTRIBUTING.md .
-	@cp ./node_modules/esmake/templates/software/.esdoc* .
-	@cp ./node_modules/esmake/templates/software/.travis.yml .
+update-commons: update-commons-files
+	@echo "please check your gear, especially .travis.yml"
+
+
+# internal
+update-commons-files:
+	@for file in $(update_commons_files); do \
+	   cp $$file .; \
+	 done
+
+
+# updates the changelog
+update-changelog:
+	@conventional-changelog -i CHANGELOG.md -w
+	@echo "make sure you check the changelog for any duplicates/errors"
 

@@ -25,6 +25,6 @@
     }
   ],
   "files": [
-    "Makefile.*.in", "templates"
+    "*.md", "Makefile.*.in", "templates"
   ]
 }
