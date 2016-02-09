@@ -44,7 +44,7 @@ fixtures		= $(shell find $(test_dir) -type d -name 'fixtures')
 .PHONY: build build-cover build-doc-$(doc) build-src build-test \
 		build-fixtures cover check-cover clean clean-doc clean-build clean-cover \
 		clean-dist deps deps-global deps-global-travis dist doc \
-		lint test watch watch-run publish assert-master \
+		lint test watch watch-run publish assert-master assert-changelog \
 		update-commons
 
 
@@ -197,7 +197,7 @@ lint: $(sources) $(tests)
 	@eslint $?
 
 
-publish: assert-master clean dist
+publish: assert-master assert-changelog clean dist
 	@cd ${dist_dir} && MASTER=1 npm publish
 
 
@@ -252,6 +252,12 @@ $(covercurried):
 # internal
 assert-master:
 	@git status | grep "On branch master" >/dev/null
+
+
+# internal
+assert-changelog:
+	@grep $$(grep version package.json | tr -d ' ' | cut -f 2 -d ':' | cut -f 2 -d '"') CHANGELOG.md >/dev/null \
+	 || (echo "CHANGELOG was not updated!" && exit 1)
 
 
 # updates build process related commons

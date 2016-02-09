@@ -1,18 +1,18 @@
 {
-  "name": TBD:name,
-  "version": TBD:version,
-  "description": TBD:description,
+  "name": "TBD:NAME",
+  "version": "TBD:VERSION",
+  "description": "TBD:DESCRIPTION",
   "keywords": [
-    TBD:keywords
+    TBD:KEYWORDS
   ],
   "license": "Apache-2.0",
-  "homepage": TBD:homepage "http://es.coldrye.eu/",
+  "homepage": "http://TBD:PROJECT.es.coldrye.eu/",
   "bugs": {
-    "url": TBD:bugs "https://github.com/coldrye-es/TBD/issues"
+    "url": "https://github.com/coldrye-es/TBD:NAME/issues"
   },
   "repository": {
     "type": "git",
-    "url": TBD:git "git+https://github.com/coldrye-es/TBD.git"
+    "url": "https://github.com/coldrye-es/TBD:NAME.git"
   },
   "author": {
     "name": "Carsten Klein",
@@ -31,6 +31,7 @@
     "prepublish": "test \"${MASTER}\" = \"1\" || (echo ${npm_config_argv} | grep -E '(install|update)' >/dev/null 2>/dev/null || (echo 'use *make publish* instead' && exit 1))"
   },
   "dependencies": {
+    TBD:DEPENDENCIES
     "babel-runtime": ">=6.3.x"
   },
   "devDependencies": {
@@ -47,7 +48,6 @@
     "sinon": ">=1.17.3"
   },
   "globalDevDependencies": {
-    "babel": ">=6.3.x",
     "babel-cli": ">=6.3.x",
     "babel-core": ">=6.3.x",
     "babel-eslint": ">=4.1.1",

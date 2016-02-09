@@ -1,3 +1,17 @@
+<a name="0.0.11"></a>
+## 0.0.11 (2016-02-09)
+
+
+* version bump v0.0.11 ([fb6fdab](https://github.com/coldrye-es/esmake/commit/fb6fdab))
+
+### fix
+
+* fix(Makefile.software.in): publish will now assert that the changelog was updated ([4fdee37](https://github.com/coldrye-es/esmake/commit/4fdee37))
+* fix(templates/software): fix(templates/software): add missing gitignore ([4fdee37](https://github.com/coldrye-es/esmake/commit/4fdee37))
+* fix(Makefile.software.in): remove extraneous echo ([aaea392](https://github.com/coldrye-es/esmake/commit/aaea392))
+
+
+
 <a name="0.0.10"></a>
 ## 0.0.10 (2016-02-04)
 
