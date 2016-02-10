@@ -1,3 +1,24 @@
+<a name="0.1.0"></a>
+# 0.1.0 (2016-02-09)
+
+
+* version bump v0.1.0 ([a805996](https://github.com/coldrye-es/esmake/commit/a805996))
+
+### chore
+
+* docs(README.md): include new targets ([dfce481](https://github.com/coldrye-es/esmake/commit/dfce481))
+
+### feat
+
+* feat(specs): new template and makefile for simple documentation projects ([1dc6f72](https://github.com/coldrye-es/esmake/commit/1dc6f72))
+* feat(Makefile.software.in): add init-commons, update-changelog ([dfce481](https://github.com/coldrye-es/esmake/commit/dfce481))
+
+### fix
+
+* fix(software): gitignore was ignored by npm ([dfce481](https://github.com/coldrye-es/esmake/commit/dfce481))
+
+
+
 <a name="0.0.11"></a>
 ## 0.0.11 (2016-02-09)
 
