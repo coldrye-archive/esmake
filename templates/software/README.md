@@ -24,7 +24,7 @@ including test coverage reports and API documentation.
 ## Contributing
 
 You are very welcome to propose changes and report bugs, or even provide pull
-requests on [github](https://github.com/coldrye-es/esbases).
+requests on [github](https://github.com/coldrye-es/TBD:NAME).
 
 See the [contributing guidelines](https://github.com/coldrye-es/TBD:NAME/blob/master/CONTRIBUTING.md) for more information.
 
@@ -68,5 +68,5 @@ import TBD from 'TBD:NAME';
 ## Resources
 
  - (1) [Github Site](https://github.com/coldrye-es/TBD:NAME)
- - (2) [Project Site](http://TBD:NAME.es.coldrye.eu)
+ - (2) [Project Site](http://TBD:PROJECT.es.coldrye.eu)
 
