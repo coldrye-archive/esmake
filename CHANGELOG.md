@@ -1,3 +1,16 @@
+<a name="0.1.1"></a>
+## 0.1.1 (2016-02-19)
+
+
+* version bump v0.1.1 ([3b7c313](https://github.com/coldrye-es/esmake/commit/3b7c313))
+
+### fix
+
+* fix(software): dist dependencies now use tilde ranges instead of caret ranges ([fdc9dac](https://github.com/coldrye-es/esmake/commit/fdc9dac))
+* fix(software): README template contained link to different project ([275e6b4](https://github.com/coldrye-es/esmake/commit/275e6b4))
+
+
+
 <a name="0.1.0"></a>
 # 0.1.0 (2016-02-09)
 

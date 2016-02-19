@@ -210,7 +210,7 @@ dist: clean-dist lint cover
 	@echo "creating distribution..."
 	@BABEL_ENV="DIST" babel -d $(dist_dir) $(src_dir) >/dev/null
 	@cp *.md LICENSE $(dist_dir)/ >/dev/null
-	@cat package.json | sed "s/>=/^/" > $(dist_dir)/package.json
+	@cat package.json | sed "s/>=/~/" > $(dist_dir)/package.json
 
 
 # creates the apidocs
