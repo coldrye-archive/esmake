@@ -2,8 +2,8 @@ build
 dist
 coverage
 node_modules
-.*.bak
-.*.swp
+.*bak
+.*swp
 npm-debug.log
 .DS_Store
 .*lock

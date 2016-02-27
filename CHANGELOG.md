@@ -1,3 +1,15 @@
+<a name="0.1.2"></a>
+## 0.1.2 (2016-02-27)
+
+
+* version bump v0.1.2 ([f51fef1](https://github.com/coldrye-es/esmake/commit/f51fef1))
+
+### fix
+
+* fix(software): fixes #5 #3 ([320aa18](https://github.com/coldrye-es/esmake/commit/320aa18)), closes [#5](https://github.com/coldrye-es/esmake/issues/5) [#3](https://github.com/coldrye-es/esmake/issues/3)
+
+
+
 <a name="0.1.1"></a>
 ## 0.1.1 (2016-02-19)
 
