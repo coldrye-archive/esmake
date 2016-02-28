@@ -1,3 +1,15 @@
+<a name="0.1.3"></a>
+## 0.1.3 (2016-02-28)
+
+
+* version bump 0.1.3 ([8bdc8d9](https://github.com/coldrye-es/esmake/commit/8bdc8d9))
+
+### fix
+
+* fix(software): testing with chaijs sometimes requires unused expressions ([d7e4993](https://github.com/coldrye-es/esmake/commit/d7e4993))
+
+
+
 <a name="0.1.2"></a>
 ## 0.1.2 (2016-02-27)
 
