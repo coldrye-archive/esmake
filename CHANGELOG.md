@@ -1,3 +1,15 @@
+<a name="0.1.4"></a>
+## 0.1.4 (2016-03-07)
+
+
+* version bump v0.1.4 ([2974c3b](https://github.com/coldrye-es/esmake/commit/2974c3b))
+
+### fix
+
+* fix(software): eslint will break babel-eslint when >= 2.3.0, no longer report lint errors on sinon ([056473f](https://github.com/coldrye-es/esmake/commit/056473f))
+
+
+
 <a name="0.1.3"></a>
 ## 0.1.3 (2016-02-28)
 

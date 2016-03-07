@@ -1,4 +1,5 @@
 import chai from 'chai';
+/* eslint no-unused-vars:0 */
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
 
