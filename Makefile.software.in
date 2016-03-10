@@ -230,7 +230,7 @@ publish: assert-master assert-changelog clean dist
 # tests everything
 test: $(tests)
 	@echo "running tests..."
-	@BABEL_ENV="TEST" mocha --compilers js:babel-core/register $?
+	@BABEL_ENV="TEST" mocha --sort --compilers js:babel-core/register $?
 
 
 # runs a perpetual watch on the sources and builds and

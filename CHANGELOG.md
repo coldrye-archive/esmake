@@ -1,3 +1,15 @@
+<a name="0.1.5"></a>
+## 0.1.5 (2016-03-10)
+
+
+* version bump v0.1.5 ([d44fe4c](https://github.com/coldrye-es/esmake/commit/d44fe4c))
+
+### fix
+
+* fix(Makefile.software.in): must sort tests, somehow mocha behaviour was changed ([4f5cda3](https://github.com/coldrye-es/esmake/commit/4f5cda3))
+
+
+
 <a name="0.1.4"></a>
 ## 0.1.4 (2016-03-07)
 
