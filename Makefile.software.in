@@ -89,7 +89,7 @@ build-cover: $(covercurried)
 # internal
 build-doc-$(doc): $(sources)
 	@echo "building $(subst build-doc-,,$(@)) docs..."
-	@esdoc -c .esdoc-$(subst build-doc-,,$(@)).json >/dev/null
+	@esdoc -c .esdoc-$(subst build-doc-,,$(@)).json
 
 
 # internal
