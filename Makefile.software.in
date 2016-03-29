@@ -61,6 +61,7 @@ init_commons_dirs = \
 
 update_commons_files = \
 	$(commons_src)/CONTRIBUTING.md \
+    $(commons_src)/.babelrc \
 	$(commons_src)/.esdoc-pub.json \
 	$(commons_src)/.esdoc-dev.json \
 	$(commons_src)/.travis.yml
@@ -82,8 +83,8 @@ build: build-src build-test
 build-cover: $(covercurried)
 	@echo "gathering coverage data..."
 	@echo "$(nodever)" | grep "^v0.12" >/dev/null && \
-	node --harmony $(babel_istanbul) cover _mocha $(build_test_dir)/* || \
-	$(babel_istanbul) cover _mocha $(build_test_dir)/*
+	BABEL_ENV=TEST node --harmony $(babel_istanbul) cover _mocha $(build_test_dir)/* || \
+	BABEL_ENV=TEST $(babel_istanbul) cover _mocha $(build_test_dir)/*
 
 
 # internal

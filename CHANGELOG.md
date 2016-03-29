@@ -1,3 +1,27 @@
+<a name="0.1.7"></a>
+## 0.1.7 (2016-03-29)
+
+
+* version bump v0.1.7 ([3d10284](https://github.com/coldrye-es/esmake/commit/3d10284))
+
+### fix
+
+* fix(software): make cover now uses BABEL_ENV=TEST and additional settings to make istanbul ignore wo ([37c32ff](https://github.com/coldrye-es/esmake/commit/37c32ff))
+
+
+
+<a name="0.1.6"></a>
+## 0.1.6 (2016-03-14)
+
+
+* version bump v0.1.6 ([df902e3](https://github.com/coldrye-es/esmake/commit/df902e3))
+
+### fix
+
+* fix(software): must not quench output of esdoc ([2e2b558](https://github.com/coldrye-es/esmake/commit/2e2b558))
+
+
+
 <a name="0.1.5"></a>
 ## 0.1.5 (2016-03-10)
 
