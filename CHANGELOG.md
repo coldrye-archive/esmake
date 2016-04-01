@@ -1,3 +1,15 @@
+<a name="0.1.8"></a>
+## [0.1.8](https://github.com/coldrye-es/esmake/compare/v0.1.7...v0.1.8) (2016-04-01)
+
+
+### Bug Fixes
+
+* **software:** conventional-changelog once again broke with its established contract ([ba3ba08](https://github.com/coldrye-es/esmake/commit/ba3ba08))
+* **software:** esdoc needs es7 plugin ([00ada6c](https://github.com/coldrye-es/esmake/commit/00ada6c))
+* **software:** fix conventional-changelog dependency ([dcf76f9](https://github.com/coldrye-es/esmake/commit/dcf76f9))
+
+
+
 <a name="0.1.7"></a>
 ## 0.1.7 (2016-03-29)
 
