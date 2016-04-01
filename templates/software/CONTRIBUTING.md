@@ -46,7 +46,7 @@
     * Too many unrelated changes in a single commit distributed across the lot of the code base makes it difficult to understand your intentions
     * Use `commit --amend` gratuitously when working on your branch
 * Implement required tests, PRs without a proper test coverage will be rejected
-    * Using mocha here and `esaver` for the assertions
+    * Using mocha, chai and sinon here
     * Once set to 100%, overall coverage goals must not be changed, instead, implement additional tests and feel free to refactor where necessary or ask for help in order to make it reach its "cast in stone" coverage goals
     * Don't just `/* istanbul ignore everything */` just to make the Travis build work, rather, let it fail and we will figure out the issues together
 * When writing commit messages, please try to adhere to the standards established by [conventional-changelog](https://github.com/ajoslin/conventional-changelog)
