@@ -31,7 +31,7 @@ See the [contributing guidelines](https://github.com/coldrye-es/TBD:NAME/blob/ma
 
 ### Contributors
 
- - [Carsten Klein](https://github.com/silkentrance) **Maintainer**
+See [contributors](https://github.com/coldrye-es/TBD:NAME/graphs/contributors) for more information.
 
 
 ### Building
