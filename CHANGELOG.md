@@ -1,3 +1,16 @@
+<a name="0.1.10"></a>
+## [0.1.10](https://github.com/coldrye-es/esmake/compare/v0.1.9...v0.1.10) (2016-05-03)
+
+
+* version bump v0.1.10([c1ace68](https://github.com/coldrye-es/esmake/commit/c1ace68))
+
+
+### Bug Fixes
+
+* **templates/software:** depend on conventional-changelog-coldrye([fbb6704](https://github.com/coldrye-es/esmake/commit/fbb6704))
+
+
+
 <a name="0.1.9"></a>
 ## [0.1.9](https://github.com/coldrye-es/esmake/compare/v0.1.8...v0.1.9) (2016-04-23)
 
