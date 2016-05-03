@@ -329,6 +329,6 @@ update-commons-files:
 
 # updates the changelog
 update-changelog:
-	@conventional-changelog -i CHANGELOG.md -s -p angular
+	@conventional-changelog -i CHANGELOG.md -s -p coldrye
 	@echo "make sure you check the changelog for any duplicates/errors"
 
